@@ -32,7 +32,7 @@ export async function scanWorkspace(): Promise<ScannedFile[]> {
                     continue;
                 }
 
-                // Recursively walk ignored directories
+                // Recursively walk subdirectories
                 await walkDirectory(fullPath);
             } else if (entry.isFile()) {
                 const extension = path.extname(entry.name);

@@ -44,7 +44,7 @@ async function runAnalysisCommand() {
         }
 
         // 2. Transmit to API
-        progress.report({ message: `Sending ${files.length} filed to backend...` });
+        progress.report({ message: `Sending ${files.length} files to backend...` });
 
         // Let the user see the "Sending" step briefly before Analysis starts
         await new Promise(resolve => setTimeout(resolve, 500));

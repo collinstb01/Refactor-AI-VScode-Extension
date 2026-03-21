@@ -56,7 +56,7 @@ async function scanWorkspace() {
                 if (IGNORE_DIRS.includes(entry.name)) {
                     continue;
                 }
-                // Recursively walk ignored directories
+                // Recursively walk subdirectories
                 await walkDirectory(fullPath);
             }
             else if (entry.isFile()) {

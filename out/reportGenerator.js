@@ -60,7 +60,7 @@ async function generateReport(data) {
         markdown += `No critical issues found! 🎉\n\n`;
     }
     else {
-        // Automatically group identical code flaws by their root filepath
+        // Group issues by file path for organized report
         const groupedIssues = {};
         for (const issue of issues) {
             const file = issue.file_path || "Unknown File Context";
